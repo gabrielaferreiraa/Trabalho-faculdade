@@ -32,13 +32,15 @@ float calculoSomaatributos (Cidade cidade[], int indice){
 
 int main() {
     int codigoCidade[2];
-    char nomeCidade[2][100] = {"d", "d"};
+    char nomeCidade[2][100] = {'d', 'd'};
     int populacao[2];
     float area[2];
     float PIB[2];
     int numeroPt[2];
     float densidadeInvertida[2];
     int escolha;
+    float soma0;
+    float soma1;
 
     // Cadastro das Cartas:
     printf ("Atributos das cidades\n Digite o código da cidade 1:");
@@ -77,7 +79,7 @@ int main() {
     };
 
     //Opções de escolha de atributo
-    printf ("Digite o número do atributo que você quer para determinar o vencedor: \n");
+    printf ("Atributos: \n");
     printf ("1 - Atributo POPULAÇÃO\n");
     printf ("2 - Atributo ÁREA\n");
     printf ("3 - Atributo PIB\n");
@@ -85,6 +87,7 @@ int main() {
     printf ("5 - Atributo DENSIDADE POPULACIONAL\n");
     printf ("6 - Atributo PIB PER CAPITA\n");
     printf ("7 - Atributo SUPER PODER\n");
+    printf ("Digite o número do atributo que você quer para determinar o vencedor: \n");
     scanf ("%d", &escolha);  
 
     switch (escolha){
@@ -143,8 +146,8 @@ int main() {
             }
             break;
         case 7: // Super poder
-            float soma0 = calculoSomaatributos(cidade, 1);
-            float soma1 = calculoSomaatributos(cidade, 1);
+            soma0 = calculoSomaatributos(cidade, 1);
+            soma1 = calculoSomaatributos(cidade, 1);
 
             if (soma0 > soma1){
                 printf("Super Trunfo: Carta 1 venceu!\n");
